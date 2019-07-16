@@ -1,0 +1,12 @@
+.filler {
+  flex: 1 1 auto;
+}
+
+.toolbar-btn{
+  height: 100%;
+  border-radius: 0px;
+  min-width: 100px;
+}
+.toolbar-btn:hover{
+  background-color:rgb(122, 112, 129)
+}

@@ -1,0 +1,42 @@
+
+<div class="pop-out-form">
+  <!--  header-->
+  <app-form-header></app-form-header>
+
+  <div class="form-content">
+    <div class="row-div">
+      <mat-form-field class="input-vertical">
+        <input matInput placeholder="Description" label="Description">
+      </mat-form-field>
+      <mat-form-field class="input-vertical">
+        <input matInput placeholder="Amount" type="number" label="Description" class="input-vertical">
+      </mat-form-field>
+    </div>
+
+    <br>
+
+    <div class="row-div">
+
+      <mat-form-field class="input-vertical">
+        <input matInput placeholder="Starting Date" type="date" class="input-vertical">
+      </mat-form-field>
+
+      <mat-form-field class="input-vertical">
+        <mat-select placeholder="Recurence">
+          <mat-option value="Once">Once</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="row-div">
+      <mat-form-field class="input-vertical" >
+        <textarea matInput placeholder="Notes" rows="4"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <!--  btn toobar-->
+  <app-form-toolbar></app-form-toolbar>
+</div>
+
+
