@@ -11,6 +11,12 @@ import { FormIncomeComponent } from './form-income/form-income.component';
 import { FormHeaderComponent } from './form-header/form-header.component';
 import { FormToolbarComponent } from './form-toolbar/form-toolbar.component';
 
+import { RouterModule } from '@angular/router';
+import { ROUTES } from './routes/routes';
+import { RegisterComponent } from './register/register.component';
+import { LoginToolbarComponent } from './login-toolbar/login-toolbar.component';
+import {FormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +25,8 @@ import { FormToolbarComponent } from './form-toolbar/form-toolbar.component';
     FormIncomeComponent,
     FormHeaderComponent,
     FormToolbarComponent,
+    RegisterComponent,
+    LoginToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +40,8 @@ import { FormToolbarComponent } from './form-toolbar/form-toolbar.component';
     MatInputModule,
     MatFormFieldModule,
     MatSelectModule,
+    RouterModule.forRoot(ROUTES),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

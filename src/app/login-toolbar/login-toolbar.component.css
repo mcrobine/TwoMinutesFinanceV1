@@ -1,0 +1,14 @@
+.filler {
+  flex: 1 1 auto;
+}
+
+.bottom{
+  position: absolute;
+  bottom: 0;
+}
+
+.toolbar-btn{
+  width: 150px;
+  height: 50px;
+  margin: 15px;
+}
