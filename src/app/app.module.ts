@@ -5,17 +5,23 @@ import { MatButtonModule, MatTableModule, MatPaginatorModule, MatSortModule, Mat
 import { MatSidenavModule, MatInputModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
-import { DataDashComponent } from './data-dash/data-dash.component';
-import { MainToolbarComponent } from './main-toolbar/main-toolbar.component';
-import { FormIncomeComponent } from './form-income/form-income.component';
-import { FormHeaderComponent } from './form-header/form-header.component';
-import { FormToolbarComponent } from './form-toolbar/form-toolbar.component';
+import { DataDashComponent } from './util/data-dash/data-dash.component';
+import { MainToolbarComponent } from './util/main-toolbar/main-toolbar.component';
+import { FormIncomeComponent } from './funcionalities/form-income/form-income.component';
+import { FormHeaderComponent } from './util/form-header/form-header.component';
+import { FormToolbarComponent } from './util/form-toolbar/form-toolbar.component';
 
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './routes/routes';
-import { RegisterComponent } from './register/register.component';
-import { LoginToolbarComponent } from './login-toolbar/login-toolbar.component';
-import {FormsModule} from '@angular/forms';
+import { LoginComponent } from './login/login-form/login.component';
+import { LoginToolbarComponent } from './login/login-form/login-toolbar/login-toolbar.component';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
+import { LoginHeaderComponent } from './login/login-form/login-header/login-header.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
@@ -25,8 +31,10 @@ import {FormsModule} from '@angular/forms';
     FormIncomeComponent,
     FormHeaderComponent,
     FormToolbarComponent,
-    RegisterComponent,
+    LoginComponent,
     LoginToolbarComponent,
+    LoginHeaderComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,8 +50,10 @@ import {FormsModule} from '@angular/forms';
     MatSelectModule,
     RouterModule.forRoot(ROUTES),
     FormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthService,
+    HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

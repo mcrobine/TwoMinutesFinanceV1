@@ -1,6 +1,6 @@
 .pop-out-form{
-  width: 35%;
-  height: 50%;
+  width: 550px;
+  height: 350px;
   position: absolute;
   top:0;
   bottom: 0;
@@ -23,4 +23,9 @@
 .input-vertical{
   flex: 1;
   margin: 0px 5px 0px 5px;
+}
+
+li{
+  font-size: 15px;
+  color:red;
 }
