@@ -1,0 +1,42 @@
+<!--<form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">-->
+<form #form="ngForm" novalidate>
+  <div class="pop-out-form">
+    <!--  header-->
+    <app-create-account-header></app-create-account-header>
+
+    <div class="form-content">
+
+      <div class="row-div">
+        <mat-form-field class="input-vertical">
+          <input matInput placeholder="Enter new username" label="Description" ngModel name="login"
+                 required>
+        </mat-form-field>
+      </div>
+
+      <div class="row-div">
+        <mat-form-field class="input-vertical">
+          <input matInput placeholder="Enter e-mail" label="Description" ngModel name="email"
+                 required email>
+        </mat-form-field>
+      </div>
+
+      <div class="row-div">
+        <mat-form-field class="input-vertical">
+          <input matInput (focusout)="onPasswordVerif()" placeholder="Enter password" [(ngModel)]="userPassword"
+                 type="password" class="input-vertical" name="userPassword" required>
+        </mat-form-field>
+      </div>
+
+      <div class="row-div">
+        <mat-form-field class="input-vertical">
+          <input matInput (focusout)="onPasswordVerif()" placeholder="Verify password" [(ngModel)]="verifyPassword"
+                 type="password" class="input-vertical" name="verifyPassword" required>
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <!-- Toolbar-->
+    <app-create-account-toolbar></app-create-account-toolbar>
+  </div>
+</form>

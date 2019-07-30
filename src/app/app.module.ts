@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatTableModule, MatPaginatorModule, MatSortModule, MatToolbarModule } from '@angular/material';
+import {MatButtonModule, MatTableModule, MatPaginatorModule, MatSortModule, MatToolbarModule, MatCheckboxModule} from '@angular/material';
 import { MatSidenavModule, MatInputModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -21,6 +21,9 @@ import { LoginHeaderComponent } from './login/login-form/login-header/login-head
 
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { CreateAcountComponent } from './login/create-account/create-acount.component';
+import { CreateAccountHeaderComponent } from './login/create-account/create-account-header/create-account-header.component';
+import { CreateAccountToolbarComponent } from './login/create-account/create-account-toolbar/create-account-toolbar.component';
 
 
 @NgModule({
@@ -35,6 +38,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginToolbarComponent,
     LoginHeaderComponent,
     DashboardComponent,
+    CreateAcountComponent,
+    CreateAccountHeaderComponent,
+    CreateAccountToolbarComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +57,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RouterModule.forRoot(ROUTES),
     FormsModule,
     HttpClientModule,
+    MatCheckboxModule
   ],
   providers: [AuthService,
     HttpClientModule],

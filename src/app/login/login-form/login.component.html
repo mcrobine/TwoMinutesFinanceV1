@@ -1,3 +1,6 @@
+<!--Not working image-->
+<!--<img src="../src/images/ny.jpg" alt="image" height="42" width="42">-->
+
 <form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">
   <div class="pop-out-form">
     <!--  header-->
@@ -22,6 +25,7 @@
       <li *ngIf="userpassword.errors?.required && userpassword.touched">Password is required</li>
     </div>
 
+    <!-- Toolbar-->
     <app-login-toolbar></app-login-toolbar>
   </div>
 </form>

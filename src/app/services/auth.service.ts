@@ -11,29 +11,29 @@ export class AuthService {
   constructor(
     private http: HttpClient,
     private router: Router,
-  ) {}
+  ) {
+  }
 
   login(loginEntered: string, passwordEntered: string): Promise<UserData> {
-    return this.http.post(`${CONFIG.API_URL}`, {login: loginEntered,  senha: passwordEntered})
+    return this.http.post(`${CONFIG.API_URL + 'users/login'}`, {username: loginEntered, password: passwordEntered})
       .toPromise()
       .then((response) => {
-        let json = JSON.parse(JSON.stringify(response));
+        const json = JSON.parse(JSON.stringify(response));
+        console.log(json);
+        if (json === true) {
+          console.log('Enter');
+        } else {
+          console.log('Pop-up username password not correct');
+        }
+        const user = new User(1, 'asd');
 
-        let token = json.content.token;
-
-        let user = new User();
-        user.id = json.content.id;
-        user.person = json.content.pessoa;
-
-        let userData = new UserData(token, user);
-
-        return userData;
+        return new UserData('token', user);
       });
   }
 
   logUserIn(userData: UserData): void {
     sessionStorage.setItem('token', userData.token);
-    sessionStorage.setItem('person', userData.user.person);
+    sessionStorage.setItem('person', userData.user.username);
     sessionStorage.setItem('id', userData.user.id.toString());
 
     this.router.navigate(['/dashboard']);

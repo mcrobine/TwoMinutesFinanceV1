@@ -1,0 +1,27 @@
+.pop-out-form{
+  width: 550px;
+  height: 450px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 1px solid rgba(0,0,0,.03);
+  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+}
+
+.form-content{
+  padding: 10px;
+}
+
+.row-div{
+  display: flex;
+  flex-direction: row;
+}
+
+.input-vertical{
+  flex: 1;
+  margin: 0px 5px 0px 5px;
+}
+
