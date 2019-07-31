@@ -1,6 +1,8 @@
-export class User {
+import {UserData} from './UserData';
+
+export class UserLoggedIn {
   constructor(
-    public id: number,
-    public username: string
+    public success: boolean,
+    public user: UserData,
   ) {}
 }

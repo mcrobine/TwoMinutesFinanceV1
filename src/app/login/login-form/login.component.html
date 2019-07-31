@@ -9,20 +9,20 @@
     <div class="form-content">
       <div class="row-div">
         <mat-form-field class="input-vertical">
-          <input matInput placeholder="Login" #userlogin="ngModel" label="Description" ngModel name="login" required>
+          <input matInput placeholder="Login" #username="ngModel" label="Description" ngModel name="username" required>
         </mat-form-field>
       </div>
-      <li *ngIf="userlogin.errors?.required && userlogin.touched">Login is required</li>
+      <li *ngIf="username.errors?.required && username.touched">Login is required</li>
       <br>
 
       <div class="row-div">
 
         <mat-form-field class="input-vertical">
-          <input matInput placeholder="Password" #userpassword="ngModel"
+          <input matInput placeholder="Password" #password="ngModel"
                  type="password" class="input-vertical" ngModel name="password" required >
         </mat-form-field>
       </div>
-      <li *ngIf="userpassword.errors?.required && userpassword.touched">Password is required</li>
+      <li *ngIf="password.errors?.required && password.touched">Password is required</li>
     </div>
 
     <!-- Toolbar-->

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService} from '../../services/auth.service';
+import { AuthService} from './services/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -16,9 +16,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form) {
-    this.authService.login(form.value.login, form.value.password)
-      .then((userData) => {
-        this.authService.logUserIn(userData);
+    this.authService.login(form.value.username, form.value.password)
+      .then((userLoggedIn) => {
+        this.authService.logUserIn(userLoggedIn);
       });
   }
 }

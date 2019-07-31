@@ -16,7 +16,7 @@ import { ROUTES } from './routes/routes';
 import { LoginComponent } from './login/login-form/login.component';
 import { LoginToolbarComponent } from './login/login-form/login-toolbar/login-toolbar.component';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from './services/auth.service';
+import { AuthService } from './login/login-form/services/auth.service';
 import { LoginHeaderComponent } from './login/login-form/login-header/login-header.component';
 
 import { HttpClientModule } from '@angular/common/http';
