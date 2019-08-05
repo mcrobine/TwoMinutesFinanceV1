@@ -16,9 +16,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(form) {
-    this.authService.login(form.value.username, form.value.password)
-      .then((userLoggedIn) => {
-        this.authService.logUserIn(userLoggedIn);
-      });
+    this.authService.login(form.value.username, form.value.password);
   }
 }

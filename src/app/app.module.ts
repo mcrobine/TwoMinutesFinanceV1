@@ -1,7 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatTableModule, MatPaginatorModule, MatSortModule, MatToolbarModule, MatCheckboxModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatTableModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatToolbarModule,
+  MatCheckboxModule,
+  MatDialogModule
+} from '@angular/material';
 import { MatSidenavModule, MatInputModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -24,7 +32,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CreateAcountComponent } from './login/create-account/create-acount.component';
 import { CreateAccountHeaderComponent } from './login/create-account/create-account-header/create-account-header.component';
 import { CreateAccountToolbarComponent } from './login/create-account/create-account-toolbar/create-account-toolbar.component';
-
+import {LoginFailedDialogComponent} from './login/login-form/login-failed-dialog/login-failed-dialog.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +49,7 @@ import { CreateAccountToolbarComponent } from './login/create-account/create-acc
     CreateAcountComponent,
     CreateAccountHeaderComponent,
     CreateAccountToolbarComponent,
+    LoginFailedDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,10 +66,11 @@ import { CreateAccountToolbarComponent } from './login/create-account/create-acc
     RouterModule.forRoot(ROUTES),
     FormsModule,
     HttpClientModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDialogModule,
   ],
-  providers: [AuthService,
-    HttpClientModule],
+  providers: [AuthService, HttpClientModule],
+  entryComponents: [LoginFailedDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
