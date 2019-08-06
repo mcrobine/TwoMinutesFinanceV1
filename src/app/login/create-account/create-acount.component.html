@@ -1,5 +1,5 @@
 <!--<form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">-->
-<form #form="ngForm" novalidate>
+<form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">
   <div class="pop-out-form">
     <!--  header-->
     <app-create-account-header></app-create-account-header>
@@ -8,7 +8,7 @@
 
       <div class="row-div">
         <mat-form-field class="input-vertical">
-          <input matInput placeholder="Enter new username" label="Description" ngModel name="login"
+          <input matInput placeholder="Enter new username" label="Description" ngModel name="username"
                  required>
         </mat-form-field>
       </div>
@@ -23,7 +23,7 @@
       <div class="row-div">
         <mat-form-field class="input-vertical">
           <input matInput (focusout)="onPasswordVerif()" placeholder="Enter password" [(ngModel)]="userPassword"
-                 type="password" class="input-vertical" name="userPassword" required>
+                 type="password" class="input-vertical" name="password" required>
         </mat-form-field>
       </div>
 

@@ -1,7 +1,6 @@
 import {Component, Injectable, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material';
 
-
 @Component({
   selector: 'app-login-failed-dialog',
   templateUrl: './login-failed-dialog.component.html',

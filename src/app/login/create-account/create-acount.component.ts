@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../login-form/services/auth.service';
 
 @Component({
   selector: 'app-create-acount',
@@ -10,7 +11,9 @@ export class CreateAcountComponent implements OnInit {
   userPassword: string;
   verifyPassword: string;
 
-  constructor() {
+  constructor(
+    private authService: AuthService,
+  ) {
   }
 
   ngOnInit() {
@@ -24,5 +27,10 @@ export class CreateAcountComponent implements OnInit {
         console.log('Good verifyPassword');
       }
     }
+  }
+
+  onSubmit(form) {
+    console.log(form.value);
+    this.authService.createAccount(form.value);
   }
 }

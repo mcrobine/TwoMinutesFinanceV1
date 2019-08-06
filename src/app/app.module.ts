@@ -33,6 +33,8 @@ import { CreateAcountComponent } from './login/create-account/create-acount.comp
 import { CreateAccountHeaderComponent } from './login/create-account/create-account-header/create-account-header.component';
 import { CreateAccountToolbarComponent } from './login/create-account/create-account-toolbar/create-account-toolbar.component';
 import {LoginFailedDialogComponent} from './login/login-form/login-failed-dialog/login-failed-dialog.component';
+import { NewAccountFailedDialogComponent } from './login/create-account/new-account-failed-dialog/new-account-failed-dialog.component';
+import { NewAccountSuccessDialogComponent } from './login/create-account/new-account-success-dialog/new-account-success-dialog.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import {LoginFailedDialogComponent} from './login/login-form/login-failed-dialog
     CreateAccountHeaderComponent,
     CreateAccountToolbarComponent,
     LoginFailedDialogComponent,
+    NewAccountFailedDialogComponent,
+    NewAccountSuccessDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +74,11 @@ import {LoginFailedDialogComponent} from './login/login-form/login-failed-dialog
     MatDialogModule,
   ],
   providers: [AuthService, HttpClientModule],
-  entryComponents: [LoginFailedDialogComponent],
+  entryComponents: [
+    LoginFailedDialogComponent,
+    NewAccountFailedDialogComponent,
+    NewAccountSuccessDialogComponent,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
