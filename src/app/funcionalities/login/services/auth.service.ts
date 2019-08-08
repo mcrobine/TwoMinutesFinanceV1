@@ -2,10 +2,10 @@ import {Injectable} from '@angular/core';
 import {CONFIG} from '../../../config/config';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
-import {LoginFailedDialogComponent} from '../login-failed-dialog/login-failed-dialog.component';
+import {LoginFailedDialogComponent} from '../login-form/login-failed-dialog/login-failed-dialog.component';
 import {MatDialog} from '@angular/material';
-import {NewAccountFailedDialogComponent} from '../../create-account/new-account-failed-dialog/new-account-failed-dialog.component';
-import {NewAccountSuccessDialogComponent} from '../../create-account/new-account-success-dialog/new-account-success-dialog.component';
+import {NewAccountFailedDialogComponent} from '../create-account-form/new-account-failed-dialog/new-account-failed-dialog.component';
+import {NewAccountSuccessDialogComponent} from '../create-account-form/new-account-success-dialog/new-account-success-dialog.component';
 
 @Injectable()
 export class AuthService {
@@ -15,6 +15,13 @@ export class AuthService {
     private router: Router,
     private dialog: MatDialog
   ) {
+  }
+
+  isLoggedin(): boolean {
+    const username = sessionStorage.getItem('username');
+    const userId = sessionStorage.getItem('userId');
+
+    return !!(username && userId);
   }
 
   login(loginEntered: string, passwordEntered: string) {
@@ -27,7 +34,7 @@ export class AuthService {
         if (success) {
 
           sessionStorage.setItem('username', json.content.username);
-          sessionStorage.setItem('id', json.content.id);
+          sessionStorage.setItem('userId', json.content.id);
 
           this.router.navigate(['/dashboard']);
         } else {
@@ -41,7 +48,6 @@ export class AuthService {
       username: formVal.username,
       password: formVal.password,
       email: formVal.email,
-      //formVal
     })
       .toPromise()
       .then((response) => {
