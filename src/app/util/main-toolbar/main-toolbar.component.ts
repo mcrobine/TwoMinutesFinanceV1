@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DashboardService} from '../../funcionalities/dashboard/services/dashboard.service';
+import {MainToolbarServiceService} from './service/main-toolbar-service.service';
 
 @Component({
   selector: 'app-main-toolbar',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainToolbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private mainToolbarServiceService: MainToolbarServiceService
+  ) {
+  }
 
   ngOnInit() {
+  }
+
+  onLoginBtnTap() {
+    this.mainToolbarServiceService.logout();
   }
 
 }
