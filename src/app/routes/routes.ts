@@ -4,6 +4,7 @@ import {DashboardComponent} from '../funcionalities/dashboard/dashboard.componen
 import {CreateAcountComponent} from '../funcionalities/login/create-account-form/create-acount.component';
 import {AuthGuard} from '../guards/AuthGuard';
 import {AuthedGuard} from '../guards/AuthedGuard';
+import {SystemConfigComponent} from '../funcionalities/system-config/system-config.component';
 
 export const ROUTES = [{
   path: 'auth/login',
@@ -18,6 +19,10 @@ export const ROUTES = [{
   component: DashboardComponent,
   canActivate: [AuthGuard],
 }, {
+  path: 'system-config',
+  component: SystemConfigComponent,
+  canActivate: [AuthGuard],
+},{
   path: 'feature/income',
   component: FormIncomeComponent,
   canActivate: [AuthGuard],

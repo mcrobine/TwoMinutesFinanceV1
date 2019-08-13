@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar class="mainDiv" color="primary">
   <span>Two Minutes Wallet</span>
 
   <!-- This fills the remaining space of the current row -->
@@ -6,7 +6,7 @@
 
   <button mat-flat-button color="warm" class="toolbar-btn">Income</button>
   <button mat-flat-button color="warm" class="toolbar-btn">Costs</button>
-  <button mat-flat-button color="warm" class="toolbar-btn">Configurations</button>
+  <button mat-flat-button color="warm" class="toolbar-btn" (click)="onConfigurationBtnTap()">Configurations</button>
   <button mat-flat-button color="warm" class="toolbar-btn" (click)="onLoginBtnTap()">Log out</button>
 
 </mat-toolbar>

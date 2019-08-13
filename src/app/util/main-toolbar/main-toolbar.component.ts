@@ -21,4 +21,8 @@ export class MainToolbarComponent implements OnInit {
     this.mainToolbarServiceService.logout();
   }
 
+  onConfigurationBtnTap(){
+    this.mainToolbarServiceService.systemConfig();
+  }
+
 }

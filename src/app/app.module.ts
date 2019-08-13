@@ -10,7 +10,7 @@ import {
   MatCheckboxModule,
   MatDialogModule
 } from '@angular/material';
-import {MatSidenavModule, MatInputModule, MatFormFieldModule, MatSelectModule} from '@angular/material';
+import {MatSidenavModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatIconModule, MatListModule} from '@angular/material';
 
 //import {AuthGuard} from './guards/auth.guard.ts';
 
@@ -39,6 +39,9 @@ import {NewAccountFailedDialogComponent} from './funcionalities/login/create-acc
 import {NewAccountSuccessDialogComponent} from './funcionalities/login/create-account-form/new-account-success-dialog/new-account-success-dialog.component';
 import {AuthGuard} from './guards/AuthGuard';
 import {AuthedGuard} from './guards/AuthedGuard';
+import { SystemConfigComponent } from './funcionalities/system-config/system-config.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { SystemConfigNavComponent } from './funcionalities/system-config/system-config-nav/system-config-nav.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +61,8 @@ import {AuthedGuard} from './guards/AuthedGuard';
     LoginFailedDialogComponent,
     NewAccountFailedDialogComponent,
     NewAccountSuccessDialogComponent,
+    SystemConfigComponent,
+    SystemConfigNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,6 +81,9 @@ import {AuthedGuard} from './guards/AuthedGuard';
     HttpClientModule,
     MatCheckboxModule,
     MatDialogModule,
+    LayoutModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [AuthService,
     HttpClientModule,

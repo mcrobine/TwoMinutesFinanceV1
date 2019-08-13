@@ -14,4 +14,8 @@ export class MainToolbarServiceService {
     sessionStorage.clear();
     this.router.navigate(['/auth/login']);
   }
+
+  systemConfig() {
+    this.router.navigate(['system-config']);
+  }
 }
