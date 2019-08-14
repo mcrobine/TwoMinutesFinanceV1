@@ -1,6 +1,7 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
 import {
   MatButtonModule,
   MatTableModule,
@@ -12,7 +13,6 @@ import {
 } from '@angular/material';
 import {MatSidenavModule, MatInputModule, MatFormFieldModule, MatSelectModule, MatIconModule, MatListModule} from '@angular/material';
 
-//import {AuthGuard} from './guards/auth.guard.ts';
 
 import {AppComponent} from './app.component';
 import {DataDashComponent} from './util/data-dash/data-dash.component';
@@ -42,6 +42,7 @@ import {AuthedGuard} from './guards/AuthedGuard';
 import { SystemConfigComponent } from './funcionalities/system-config/system-config.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { SystemConfigNavComponent } from './funcionalities/system-config/system-config-nav/system-config-nav.component';
+import { PageNotFoundComponent } from './util/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { SystemConfigNavComponent } from './funcionalities/system-config/system-
     NewAccountSuccessDialogComponent,
     SystemConfigComponent,
     SystemConfigNavComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

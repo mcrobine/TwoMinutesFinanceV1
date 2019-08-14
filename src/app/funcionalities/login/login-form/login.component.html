@@ -1,15 +1,17 @@
-<!--Not working image-->
-<!--<img src="../src/images/ny.jpg" alt="image" height="42" width="42">-->
+<!--Background Image-->
+<div class="background"></div>
 
-<form #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">
-  <div class="pop-out-form">
+<!--Form-->
+<form class="clear-background" #form="ngForm" novalidate (ngSubmit)="onSubmit(form)">
+  <div class="pop-out-form clear-background">
     <!--  header-->
     <app-login-header></app-login-header>
 
     <div class="form-content">
       <div class="row-div">
         <mat-form-field class="input-vertical">
-          <input matInput placeholder="Username" #username="ngModel" label="Description" ngModel name="username" required>
+          <input matInput placeholder="Username" #username="ngModel" label="Description" ngModel name="username"
+                 required>
         </mat-form-field>
       </div>
       <br>
@@ -18,7 +20,7 @@
 
         <mat-form-field class="input-vertical">
           <input matInput placeholder="Password" #password="ngModel"
-                 type="password" class="input-vertical" ngModel name="password" required >
+                 type="password" class="input-vertical" ngModel name="password" required>
         </mat-form-field>
       </div>
     </div>
@@ -27,6 +29,5 @@
     <app-login-toolbar></app-login-toolbar>
   </div>
 </form>
-
 
 

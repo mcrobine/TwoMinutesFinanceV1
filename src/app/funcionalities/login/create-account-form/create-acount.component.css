@@ -42,3 +42,12 @@
   flex: 1 1 auto;
 }
 
+.background {
+  background-image: url('../../../../images/ny.jpg');
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:100%;
+  width:100%;
+}
+

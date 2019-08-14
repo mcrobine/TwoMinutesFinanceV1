@@ -5,8 +5,12 @@ import {CreateAcountComponent} from '../funcionalities/login/create-account-form
 import {AuthGuard} from '../guards/AuthGuard';
 import {AuthedGuard} from '../guards/AuthedGuard';
 import {SystemConfigComponent} from '../funcionalities/system-config/system-config.component';
+import {PageNotFoundComponent} from '../util/page-not-found/page-not-found.component';
 
 export const ROUTES = [{
+  path: '404',
+  component: PageNotFoundComponent,
+}, {
   path: 'auth/login',
   component: LoginComponent,
   canActivate: [AuthedGuard],
@@ -22,8 +26,15 @@ export const ROUTES = [{
   path: 'system-config',
   component: SystemConfigComponent,
   canActivate: [AuthGuard],
-},{
+}, {
   path: 'feature/income',
   component: FormIncomeComponent,
   canActivate: [AuthGuard],
+}, {
+  path: '',
+  redirectTo: 'auth/login',
+  pathMatch: 'full'
+}, {
+  path: '**',
+  redirectTo: '404'
 }];
