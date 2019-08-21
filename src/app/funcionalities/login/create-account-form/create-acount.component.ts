@@ -30,7 +30,6 @@ export class CreateAcountComponent implements OnInit {
   }
 
   onSubmit(form) {
-    console.log(form.value);
     this.authService.createAccount(form.value);
   }
 }

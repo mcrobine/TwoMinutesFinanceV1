@@ -17,6 +17,6 @@ export class NewAccountFailedDialogComponent implements OnInit {
   }
 
   onCloseDialog() {
-    const dialogRef = this.dialog.closeAll();
+    this.dialog.closeAll();
   }
 }

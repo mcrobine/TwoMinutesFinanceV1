@@ -17,7 +17,7 @@ export class MainToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
-  onLoginBtnTap() {
+  onLogoutBtnTap() {
     this.mainToolbarServiceService.logout();
   }
 

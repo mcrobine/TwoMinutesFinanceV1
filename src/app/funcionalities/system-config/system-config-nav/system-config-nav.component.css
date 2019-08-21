@@ -1,7 +1,7 @@
 .mat-sidenav-container {
-  background: #3a8ab7;
   width: 200px;
   height: calc(100% - 65px);
+
 }
 
 .toolbar-btn{

@@ -8,6 +8,38 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   color:#673ab7;
 }
 
+.primary-background {
+  background-color:#673ab7;
+}
+
+.soft {
+  color:#be96e3;
+}
+
+.soft-background {
+  background-color:#be96e3;
+}
+
+.clear {
+  color:#c9cfd4;
+}
+
 .clear-background {
-  background-color:#f5f5f5;
+  background-color:#c9cfd4;
+}
+
+.dark {
+  color:#797979;
+}
+
+.dark-background {
+  background-color:#797979;
+}
+
+.white {
+  color:white;
+}
+
+.white-background {
+  background-color:white;
 }

@@ -43,6 +43,7 @@ import { SystemConfigComponent } from './funcionalities/system-config/system-con
 import { LayoutModule } from '@angular/cdk/layout';
 import { SystemConfigNavComponent } from './funcionalities/system-config/system-config-nav/system-config-nav.component';
 import { PageNotFoundComponent } from './util/page-not-found/page-not-found.component';
+import { PopUpDialogComponent } from './util/pop-up-dialog/pop-up-dialog.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { PageNotFoundComponent } from './util/page-not-found/page-not-found.comp
     SystemConfigComponent,
     SystemConfigNavComponent,
     PageNotFoundComponent,
+    PopUpDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -95,6 +97,7 @@ import { PageNotFoundComponent } from './util/page-not-found/page-not-found.comp
     LoginFailedDialogComponent,
     NewAccountFailedDialogComponent,
     NewAccountSuccessDialogComponent,
+    PopUpDialogComponent,
   ],
   bootstrap: [AppComponent]
 })
