@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
-import {PopupDialog} from '../../pop-up-dialog/services/pop-up-dialog.service';
+import {LogOutPopupComponent} from '../log-out-popup/log-out-popup.component';
+import {MatDialog} from '@angular/material';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +10,14 @@ export class MainToolbarServiceService {
 
   constructor(
     private router: Router,
-    private popUpDialog: PopupDialog
+    private dialog: MatDialog,
   ) {
   }
 
   logout() {
-    const title = 'Warning';
-    const message = 'Are you sure you want to log out?';
-    const okBtn = 'Log out';
-    const cancelBtn = 'Stay';
-    this.popUpDialog.simplePopupOpen(title, message, okBtn, cancelBtn, '300px')
+    this.dialog.open(LogOutPopupComponent, {
+      width: '300px',
+    });
   }
 
   systemConfig() {

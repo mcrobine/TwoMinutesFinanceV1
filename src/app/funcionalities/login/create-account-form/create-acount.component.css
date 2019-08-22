@@ -38,10 +38,6 @@
   box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
 }
 
-.filler {
-  flex: 1 1 auto;
-}
-
 .background {
   background-image: url('../../../../images/ny.jpg');
   background-position:center;
