@@ -1,3 +1,3 @@
 export const CONFIG = {
-  API_URL: 'http://localhost:9897/twominwebservice/'
+  API_URL: 'http://localhost:9898/twominwebservice/'
 };

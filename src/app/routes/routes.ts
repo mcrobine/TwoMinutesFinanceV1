@@ -6,6 +6,7 @@ import {AuthGuard} from '../guards/AuthGuard';
 import {AuthedGuard} from '../guards/AuthedGuard';
 import {SystemConfigComponent} from '../funcionalities/system-config/system-config.component';
 import {PageNotFoundComponent} from '../util/page-not-found/page-not-found.component';
+import {UsersComponent} from '../funcionalities/system-config/users/users.component';
 
 export const ROUTES = [{
   path: '404',
@@ -25,6 +26,10 @@ export const ROUTES = [{
 }, {
   path: 'system-config',
   component: SystemConfigComponent,
+  canActivate: [AuthGuard],
+}, {
+  path: 'system-config/users',
+  component: UsersComponent,
   canActivate: [AuthGuard],
 }, {
   path: 'feature/income',

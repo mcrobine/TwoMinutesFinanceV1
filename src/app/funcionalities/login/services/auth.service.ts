@@ -25,16 +25,16 @@ export class AuthService {
   }
 
   login(loginEntered: string, passwordEntered: string) {
-    return this.http.post(`${CONFIG.API_URL + 'users/login'}`, {username: loginEntered, password: passwordEntered})
+    return this.http.post(`${CONFIG.API_URL + 'auth/'}`, {username: loginEntered, password: passwordEntered})
       .toPromise()
       .then((response) => {
 
         const json = JSON.parse(JSON.stringify(response));
         const success = json.success;
         if (success) {
-
-          sessionStorage.setItem('username', json.content.username);
           sessionStorage.setItem('userId', json.content.id);
+          sessionStorage.setItem('username', json.content.username);
+          sessionStorage.setItem('token', json.content.token)
 
           this.router.navigate(['/dashboard']);
         } else {

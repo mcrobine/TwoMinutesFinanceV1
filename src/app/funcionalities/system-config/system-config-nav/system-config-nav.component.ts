@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-system-config-nav',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SystemConfigNavComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+  private router: Router,
+  ) {}
 
   ngOnInit() {
   }
 
+  onUsersClick(){
+    this.router.navigate(['/system-config/users']);
+  }
 }

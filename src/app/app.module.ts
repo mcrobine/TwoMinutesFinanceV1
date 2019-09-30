@@ -44,6 +44,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { SystemConfigNavComponent } from './funcionalities/system-config/system-config-nav/system-config-nav.component';
 import { PageNotFoundComponent } from './util/page-not-found/page-not-found.component';
 import { LogOutPopupComponent } from './util/main-toolbar/log-out-popup/log-out-popup.component';
+import { MyAccountComponent } from './funcionalities/system-config/my-account/my-account.component';
+import { UsersComponent } from './funcionalities/system-config/users/users.component';
+import { UsersService } from './funcionalities/system-config/users/services/users.service';
+import { UsersTableComponent } from './funcionalities/system-config/users/users-table/users-table.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +71,9 @@ import { LogOutPopupComponent } from './util/main-toolbar/log-out-popup/log-out-
     SystemConfigNavComponent,
     PageNotFoundComponent,
     LogOutPopupComponent,
+    MyAccountComponent,
+    UsersComponent,
+    UsersTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -92,7 +99,8 @@ import { LogOutPopupComponent } from './util/main-toolbar/log-out-popup/log-out-
   providers: [AuthService,
     HttpClientModule,
     AuthGuard,
-    AuthedGuard],
+    AuthedGuard,
+    UsersService],
   entryComponents: [
     LoginFailedDialogComponent,
     NewAccountFailedDialogComponent,
