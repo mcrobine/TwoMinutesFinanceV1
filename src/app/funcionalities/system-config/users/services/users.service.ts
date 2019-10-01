@@ -19,9 +19,12 @@ export class UsersService {
         .then((response) => {
           const json = JSON.parse(JSON.stringify(response));
           const success = json.success;
-          debugger;
+          if (success) {
+           return json.content
+          } else {
+           return success
+          }
         });
   }
-
 
 }

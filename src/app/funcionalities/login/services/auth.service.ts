@@ -44,7 +44,7 @@ export class AuthService {
   }
 
   createAccount(formVal) {
-    return this.http.post(`${CONFIG.API_URL + 'users/new-account'}`, {
+    return this.http.post(`${CONFIG.API_URL + 'auth/new-account'}`, {
       username: formVal.username,
       password: formVal.password,
       email: formVal.email,
