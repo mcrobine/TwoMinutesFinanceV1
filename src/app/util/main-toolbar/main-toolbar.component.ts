@@ -25,4 +25,8 @@ export class MainToolbarComponent implements OnInit {
     this.mainToolbarServiceService.systemConfig();
   }
 
+  onMyAccountBtnTap(){
+      this.mainToolbarServiceService.myAccount();
+    }
+
 }

@@ -44,10 +44,11 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { SystemConfigNavComponent } from './funcionalities/system-config/system-config-nav/system-config-nav.component';
 import { PageNotFoundComponent } from './util/page-not-found/page-not-found.component';
 import { LogOutPopupComponent } from './util/main-toolbar/log-out-popup/log-out-popup.component';
-import { MyAccountComponent } from './funcionalities/system-config/my-account/my-account.component';
+import { MyAccountComponent } from './funcionalities/my-account/my-account.component';
 import { UsersComponent } from './funcionalities/system-config/users/users.component';
 import { UsersService } from './funcionalities/system-config/users/services/users.service';
 import { UsersTableComponent } from './funcionalities/system-config/users/users-table/users-table.component';
+import { MyAccountNavComponent } from './funcionalities/my-account/my-account-nav/my-account-nav.component';
 
 @NgModule({
   declarations: [
@@ -74,6 +75,7 @@ import { UsersTableComponent } from './funcionalities/system-config/users/users-
     MyAccountComponent,
     UsersComponent,
     UsersTableComponent,
+    MyAccountNavComponent,
   ],
   imports: [
     BrowserModule,

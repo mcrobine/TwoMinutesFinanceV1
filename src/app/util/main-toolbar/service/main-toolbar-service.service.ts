@@ -23,4 +23,8 @@ export class MainToolbarServiceService {
   systemConfig() {
     this.router.navigate(['system-config']);
   }
+
+  myAccount(){
+    this.router.navigate(['my-account']);
+  }
 }
