@@ -49,6 +49,7 @@ import { UsersComponent } from './funcionalities/system-config/users/users.compo
 import { UsersService } from './funcionalities/system-config/users/services/users.service';
 import { UsersTableComponent } from './funcionalities/system-config/users/users-table/users-table.component';
 import { MyAccountNavComponent } from './funcionalities/my-account/my-account-nav/my-account-nav.component';
+import { MyAccountGeneralComponent } from './funcionalities/my-account//my-account-general/my-account-general.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { MyAccountNavComponent } from './funcionalities/my-account/my-account-na
     UsersComponent,
     UsersTableComponent,
     MyAccountNavComponent,
+    MyAccountGeneralComponent,
   ],
   imports: [
     BrowserModule,

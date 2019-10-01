@@ -8,6 +8,7 @@ import {SystemConfigComponent} from '../funcionalities/system-config/system-conf
 import {PageNotFoundComponent} from '../util/page-not-found/page-not-found.component';
 import {UsersComponent} from '../funcionalities/system-config/users/users.component';
 import {MyAccountComponent} from '../funcionalities/my-account/my-account.component';
+import {MyAccountGeneralComponent} from '../funcionalities/my-account/my-account-general/my-account-general.component';
 
 export const ROUTES = [{
   path: '404',
@@ -30,8 +31,12 @@ export const ROUTES = [{
   canActivate: [AuthGuard],
 },  {
    path: 'my-account/general',
-   component: MyAccountComponent,
+   component: MyAccountGeneralComponent,
    canActivate: [AuthGuard],
+}, {
+  path: 'system-config',
+  component: SystemConfigComponent,
+  canActivate: [AuthGuard],
 }, {
   path: 'system-config/users',
   component: UsersComponent,
