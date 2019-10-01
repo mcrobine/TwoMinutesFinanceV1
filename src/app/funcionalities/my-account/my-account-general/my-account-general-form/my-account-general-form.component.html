@@ -1,0 +1,34 @@
+<div class="form">
+  <!-- Header -->
+  <mat-toolbar>
+    <h1>General Information of the account</h1>
+  </mat-toolbar>
+
+  <!-- Form -->
+  <div class="form-content">
+
+    <div class="row-div">
+      <mat-form-field class="input-vertical">
+        <input matInput placeholder="First Name" label="First Name">
+      </mat-form-field>
+      <mat-form-field class="input-vertical">
+        <input matInput placeholder="Last Name" label="Last Name" class="input-vertical">
+      </mat-form-field>
+    </div>
+
+    <br>
+
+    <div class="row-div">
+      <mat-form-field class="input-vertical">
+        <input matInput placeholder="Email address" type="email" class="input-vertical">
+      </mat-form-field>
+    </div>
+
+    <div class="row-div">
+      <button mat-flat-button color='primary' class="toolbar-btn"><h3 class="btn-text">Change Password <i class="fas fa-key"></i></h3></button>
+    </div>
+  </div>
+
+  <!-- Bottom toolbar-->
+  <app-form-toolbar></app-form-toolbar>
+</div>
