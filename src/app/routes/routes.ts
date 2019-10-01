@@ -28,6 +28,10 @@ export const ROUTES = [{
   path: 'my-account',
   component: MyAccountComponent,
   canActivate: [AuthGuard],
+},  {
+   path: 'my-account/general',
+   component: MyAccountComponent,
+   canActivate: [AuthGuard],
 }, {
   path: 'system-config/users',
   component: UsersComponent,

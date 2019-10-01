@@ -1,0 +1,17 @@
+.mat-sidenav-container {
+  width: 200px;
+  height: calc(100% - 65px);
+  display: inline-block;
+  float: left;
+}
+
+.toolbar-btn{
+  width: 100%;
+  border-radius: 0px;
+  height: 100%;
+  text-align: justify;
+}
+
+.mat-sidenav {
+  height: 50px;
+}
