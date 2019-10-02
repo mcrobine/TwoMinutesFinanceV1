@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MyAccountGeneralService } from '../services/my-account-general.service';
 @Component({
   selector: 'app-my-account-general-form',
   templateUrl: './my-account-general-form.component.html',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyAccountGeneralFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private service : MyAccountGeneralService
+  ) { }
 
   ngOnInit() {
+    this.service.getUserById(parseInt(sessionStorage.getItem("userId"), 10))
+
   }
 
 }

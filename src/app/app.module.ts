@@ -51,6 +51,7 @@ import { UsersTableComponent } from './funcionalities/system-config/users/users-
 import { MyAccountNavComponent } from './funcionalities/my-account/my-account-nav/my-account-nav.component';
 import { MyAccountGeneralComponent } from './funcionalities/my-account/my-account-general/my-account-general.component';
 import { MyAccountGeneralFormComponent } from './funcionalities/my-account/my-account-general/my-account-general-form/my-account-general-form.component';
+import { MyAccountGeneralService } from './funcionalities/my-account/my-account-general/services/my-account-general.service';
 
 @NgModule({
   declarations: [
@@ -106,7 +107,9 @@ import { MyAccountGeneralFormComponent } from './funcionalities/my-account/my-ac
     HttpClientModule,
     AuthGuard,
     AuthedGuard,
-    UsersService],
+    UsersService,
+    MyAccountGeneralService
+  ],
   entryComponents: [
     LoginFailedDialogComponent,
     NewAccountFailedDialogComponent,
