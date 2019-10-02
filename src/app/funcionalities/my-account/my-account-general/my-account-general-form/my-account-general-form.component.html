@@ -1,18 +1,17 @@
-<div class="form">
+<div class="form" *ngIf="userData">
   <!-- Header -->
   <mat-toolbar>
-    <h1>General Information of the account</h1>
+    <h1>General Information of {{userData.username}}</h1>
   </mat-toolbar>
-
   <!-- Form -->
   <div class="form-content">
 
     <div class="row-div">
       <mat-form-field class="input-vertical">
-        <input matInput placeholder="First Name" label="First Name">
+        <input matInput placeholder="First Name" label="First Name" [(ngModel)]="userData.firstName">
       </mat-form-field>
       <mat-form-field class="input-vertical">
-        <input matInput placeholder="Last Name" label="Last Name" class="input-vertical">
+        <input matInput placeholder="Last Name" label="Last Name" class="input-vertical" [(ngModel)]="userData.lastName">
       </mat-form-field>
     </div>
 
@@ -20,7 +19,7 @@
 
     <div class="row-div">
       <mat-form-field class="input-vertical">
-        <input matInput placeholder="Email address" type="email" class="input-vertical">
+        <input matInput placeholder="Email address" type="email" class="input-vertical" [(ngModel)]="userData.email">
       </mat-form-field>
     </div>
 
@@ -30,5 +29,8 @@
   </div>
 
   <!-- Bottom toolbar-->
-  <app-form-toolbar></app-form-toolbar>
+  <mat-toolbar class="bottom">
+    <span class="filler"></span>
+    <button mat-flat-button color="primary" class="toolbar-btn" (click)="onSaveBtnTap()"><h3>Save <i class="fas fa-save"></i></h3></button>
+  </mat-toolbar>
 </div>
